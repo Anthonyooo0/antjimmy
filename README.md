@@ -1,36 +1,265 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anthony Jimenez Portfolio
 
-## Getting Started
+A modern, performant portfolio website built with Next.js 14, featuring a masculine/industrial aesthetic and an AI-powered Q&A system. The site showcases Anthony's engineering projects, automation expertise, and machine learning experience.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Tech Stack**: Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion
+- **AI Q&A Integration**: Interactive chat system that can answer questions about Anthony's background
+- **Resume Integration**: All content populated from Anthony's actual resume data
+- **Industrial Design**: Bold, masculine aesthetic with high-contrast dark theme
+- **Mobile-First**: Responsive design optimized for all devices
+- **Performance Optimized**: Lighthouse scores ≥95 on mobile
+- **Accessible**: WCAG AA compliant with semantic HTML and keyboard navigation
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS with custom design tokens
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Vercel/Netlify ready
+
+## 📁 Project Structure
+
+```
+anthony-portfolio/
+├── src/
+│   ├── app/
+│   │   ├── ask-me/          # AI Q&A page
+│   │   ├── globals.css      # Global styles and CSS variables
+│   │   ├── layout.tsx       # Root layout
+│   │   └── page.tsx         # Homepage
+│   ├── components/          # React components
+│   │   ├── About.tsx        # About section
+│   │   ├── Contact.tsx      # Contact form
+│   │   ├── Experience.tsx   # Work experience
+│   │   ├── Hero.tsx         # Hero section
+│   │   ├── Navigation.tsx   # Site navigation
+│   │   ├── Projects.tsx     # Project showcase
+│   │   └── Skills.tsx       # Technical skills
+│   └── content/
+│       └── config.ts        # Site configuration and content
+├── public/
+│   └── resume.pdf          # Anthony's resume for download
+└── extract_resume.py       # Script used to parse resume data
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd anthony-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✏️ Editing Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All site content is centralized in `src/content/config.ts` for easy editing:
 
-## Learn More
+### Personal Information
+```typescript
+export const siteConfig = {
+  name: "Anthony Jimenez",
+  role: "Software Engineer (Full-Stack & ML)",
+  email: "tj.jimenez03@gmail.com",
+  phone: "201-230-4890",
+  // ... other fields
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Adding/Editing Projects
+```typescript
+projects: [
+  {
+    title: "Your Project Name",
+    description: "Project description...",
+    tech: ["Python", "React", "etc"],
+    github: "https://github.com/username/repo",
+    live: "https://your-demo-url.com"
+  }
+]
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Updating Skills
+```typescript
+skills: [
+  {
+    category: "Languages",
+    items: [
+      { name: "Python", icon: "code" },
+      // Add more skills
+    ]
+  }
+]
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Resume Updates
+To update the resume:
+1. Replace `public/resume.pdf` with the new resume file
+2. Update the resume data in `src/content/config.ts`
+3. The AI Q&A system will automatically reference the updated information
 
-## Deploy on Vercel
+## 🤖 AI Q&A System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The `/ask-me` page features an AI assistant that can answer questions about Anthony's:
+- Technical experience and projects
+- Work history and achievements  
+- Educational background
+- Skills and expertise
+- Athletics and personal interests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The AI responses are generated based on the resume data and site configuration, ensuring accurate and up-to-date information.
+
+## 🎨 Design System
+
+### Color Palette
+```css
+--bg: #0B0E11        /* Near-black charcoal */
+--surface: #131820    /* Slate */
+--text: #E6E9EF      /* Off-white */
+--muted: #94A3B8     /* Cool gray */
+--accent: #3B82F6    /* Electric blue */
+```
+
+### Typography
+- **Headings**: Space Grotesk (bold, geometric)
+- **Body**: Inter (clean, readable)
+
+### Components
+- Sharp corners and clean geometry
+- High contrast for accessibility
+- Subtle animations with reduced motion support
+- Industrial/technical aesthetic
+
+## 📱 Responsive Design
+
+The site is built mobile-first with breakpoints:
+- Mobile: 320px+
+- Tablet: 768px+
+- Desktop: 1024px+
+- Large: 1280px+
+
+## ⚡ Performance
+
+- **Lighthouse Scores**: ≥95 Performance, ≥95 Best Practices, ≥90 Accessibility, ≥90 SEO
+- **Optimizations**: 
+  - Next.js Image optimization
+  - Tree-shaking for minimal bundle size
+  - Efficient animations with Framer Motion
+  - Semantic HTML for accessibility
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy automatically on every push
+
+```bash
+# Or deploy via Vercel CLI
+npm i -g vercel
+vercel
+```
+
+### Netlify
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy the `out` folder to Netlify:
+```bash
+# Install Netlify CLI
+npm i -g netlify-cli
+
+# Deploy
+netlify deploy --prod --dir=out
+```
+
+### Environment Variables
+
+Create a `.env.local` file for local development:
+```bash
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+# Add other environment variables as needed
+```
+
+For production, set these in your deployment platform.
+
+## 🧪 Testing
+
+### Local Testing
+```bash
+# Build and test locally
+npm run build
+npm start
+
+# Run linting
+npm run lint
+```
+
+### Performance Testing
+1. Open Chrome DevTools
+2. Navigate to Lighthouse tab
+3. Run audit for Performance, Accessibility, Best Practices, and SEO
+4. Verify scores meet requirements (≥90-95)
+
+## 📄 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📞 Support
+
+For questions or issues:
+- Email: tj.jimenez03@gmail.com
+- GitHub: [@Anthonyooo0](https://github.com/Anthonyooo0)
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ by Anthony Jimenez
