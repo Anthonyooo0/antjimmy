@@ -47,55 +47,44 @@ export default function AskMePage() {
     setInputMessage('')
     setIsLoading(true)
 
-    setTimeout(() => {
-      const response = generateResponse(message)
+    try {
+      const response = await fetch('http://localhost:3000/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: message,
+          conversationId: 'default'
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const data = await response.json()
+      
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: response,
+        content: data.response,
         role: 'assistant',
         timestamp: new Date()
       }
+      
       setMessages(prev => [...prev, assistantMessage])
+    } catch (error) {
+      console.error('Error calling chat API:', error)
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        content: "I'm sorry, I'm having trouble connecting right now. Please try again later.",
+        role: 'assistant',
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorMessage])
+    } finally {
       setIsLoading(false)
-    }, 1000)
-  }
-
-  const generateResponse = (question: string): string => {
-    const lowerQuestion = question.toLowerCase()
-    
-    if (lowerQuestion.includes('automation') || lowerQuestion.includes('automate')) {
-      return "Anthony specializes in building automation tools that eliminate manual work. At Shock Tech Inc, he created Python automations that cut an 8-hour isolator matching task to seconds and automated analytics for 2,000+ material samples. His V8 Engine Deal Finder automates the entire process of scraping listings, deduplicating data, and scoring deals with ML. He's passionate about turning repetitive tasks into reliable systems."
     }
-    
-    if (lowerQuestion.includes('ml') || lowerQuestion.includes('machine learning') || lowerQuestion.includes('ai')) {
-      return "Anthony builds end-to-end ML systems that solve real-world problems. His V8 Engine Deal Finder uses Random Forest to score deal quality after scraping multiple marketplaces. He works with PyTorch, TensorFlow, scikit-learn, and Pandas to build complete pipelines from data collection to automated alerting. At Reminous, he applies ML to marketing automation and lead scoring."
-    }
-    
-    if (lowerQuestion.includes('shock tech') || lowerQuestion.includes('manufacturing')) {
-      return "At Shock Tech Inc, Anthony has worked in both testing and manufacturing engineering roles. As a Manufacturing Engineering Intern, he created Python automations for production data flows and built an Excel/VBA tool that reduced an 8-hour manual task to seconds. Previously as a Testing Engineering Intern, he automated analytics for 2,000+ aerospace-grade elastomer samples using Excel macros and Python, generating summarized test reports from raw equipment data."
-    }
-    
-    if (lowerQuestion.includes('education') || lowerQuestion.includes('school') || lowerQuestion.includes('njit')) {
-      return "Anthony is currently a Junior at New Jersey Institute of Technology (NJIT) in the Ying Wu College of Computing, pursuing General Engineering/Computer Science with an expected graduation in May 2027. He's also a NCAA Division 1 Track and Field athlete, which has taught him excellent time management and discipline that translates well to engineering challenges."
-    }
-    
-    if (lowerQuestion.includes('reminous') || lowerQuestion.includes('cto') || lowerQuestion.includes('startup')) {
-      return "Anthony is the CTO & Co-Founder at Reminous, a marketing automation startup based in Orlando, FL (remote). He leads software strategy, builds Python scripts for lead collection and database syncing, creates internal dashboards for sales tracking, and coordinates product requirements with design and marketing teams across weekly sprints."
-    }
-    
-    if (lowerQuestion.includes('technologies') || lowerQuestion.includes('tech stack') || lowerQuestion.includes('skills')) {
-      return "Anthony's core technologies include Python, JavaScript/Node.js, and SQL for development. He specializes in automation tools like Playwright and Selenium, ML frameworks like PyTorch and TensorFlow, and data analysis with Pandas and NumPy. He works with various databases (SQLite, MongoDB, MySQL) and is proficient in Git, Linux, and development tools like VS Code and IntelliJ."
-    }
-    
-    if (lowerQuestion.includes('athletics') || lowerQuestion.includes('track') || lowerQuestion.includes('balance')) {
-      return "As a NCAA Division 1 Track and Field athlete at NJIT, Anthony has developed exceptional time management and discipline. The competitive mindset from athletics translates directly to engineering challenges - he approaches problems with the same systematic, goal-oriented mentality. This balance has taught him to be efficient with his time and maintain focus under pressure."
-    }
-    
-    if (lowerQuestion.includes('projects') || lowerQuestion.includes('github')) {
-      return "Anthony has built several impressive automation projects: 1) V8 Engine Deal Finder - an end-to-end ML system that scrapes multiple marketplaces and scores deals, 2) PDF Email Automation with OCR for extracting tables from documents, 3) LinkedIn Easy Apply Bot that applies to jobs at 5-10/min with intelligent error handling, and 4) Manufacturing Automation Tools that streamline production workflows. All demonstrate his focus on eliminating manual work."
-    }
-    
-    return "That's a great question! Anthony is a results-driven Software Engineer specializing in full-stack development and machine learning. He builds scrapers, automations, and ML-powered tools that eliminate manual work. Currently, he's CTO at Reminous, a Manufacturing Engineering Intern at Shock Tech Inc, and a Junior at NJIT studying General Engineering/Computer Science. He's also a NCAA Division 1 Track and Field athlete. Feel free to ask about any specific aspect of his background!"
   }
 
   const copyToClipboard = (text: string) => {
