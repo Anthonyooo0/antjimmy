@@ -199,7 +199,7 @@ export default function Contact() {
               
               {submitStatus === 'error' && (
                 <p className="text-red-400 text-sm text-center">
-                  Something went wrong. Please try again or email me directly.
+                  Something went wrong. Please try again or email me directly at {siteConfig.email}.
                 </p>
               )}
             </form>

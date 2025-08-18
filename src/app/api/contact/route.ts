@@ -20,6 +20,9 @@ export async function POST(request: NextRequest) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      connectionTimeout: 10000,
+      greetingTimeout: 5000,
+      socketTimeout: 10000,
     })
 
     const mailOptions = {
@@ -47,8 +50,22 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Contact form error:', error)
+    
+    let errorMessage = 'Failed to send message. Please try again later.'
+    
+    if (error instanceof Error) {
+      if (error.message.includes('Invalid login') || error.message.includes('authentication')) {
+        errorMessage = 'Email authentication failed. Please contact the site administrator.'
+        console.error('Gmail authentication error - check EMAIL_USER and EMAIL_PASS environment variables')
+      } else if (error.message.includes('timeout') || error.message.includes('ETIMEDOUT')) {
+        errorMessage = 'Email service timeout. Please try again in a moment.'
+      } else if (error.message.includes('ENOTFOUND') || error.message.includes('network')) {
+        errorMessage = 'Network error. Please check your connection and try again.'
+      }
+    }
+    
     return NextResponse.json({ 
-      error: 'Failed to send message. Please try again later.' 
+      error: errorMessage 
     }, { status: 500 })
   }
 }
