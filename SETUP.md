@@ -75,9 +75,33 @@ To add more information about yourself to the AI chatbox:
 - **Error Handling**: Graceful handling of API errors
 - **Responsive UI**: Clean chat interface that adapts to screen size
 
+## 📧 Gmail Setup for Contact Form
+
+The contact form uses Gmail SMTP to send emails. You need to set up a Gmail App Password:
+
+1. **Enable 2-Step Verification** on your Gmail account:
+   - Go to [Google Account Security](https://myaccount.google.com/security)
+   - Enable 2-Step Verification if not already enabled
+
+2. **Create an App Password**:
+   - Go to [Google Account Security](https://myaccount.google.com/security)
+   - Click on "2-Step Verification"
+   - Scroll down to "App passwords"
+   - Select "Mail" and your device
+   - Copy the generated 16-character password
+
+3. **Update your .env file**:
+   ```bash
+   EMAIL_USER=your-email@gmail.com
+   EMAIL_PASS=your-16-character-app-password
+   ```
+
+**Important**: Use the App Password, not your regular Gmail password. Regular passwords will not work with nodemailer.
+
 ## 📝 Notes
 
 - The AI chatbox requires a valid OpenAI API key to function
 - Get your API key from: https://platform.openai.com/account/api-keys
 - The server serves both the backend API and frontend files
 - All your personal information is already included in the AI's system prompt
+- For the contact form to work, you must configure Gmail App Password authentication
