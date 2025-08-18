@@ -39,7 +39,7 @@ CURRENT ROLES:
 PREVIOUS EXPERIENCE:
 - Testing Engineering Intern at Shock Tech Inc (12/2023 – 12/2024)
   * Operated Instron testing equipment for tensile, compression, and failure analysis on aerospace-grade elastomers
-  * Automated large-scale data analysis for 2,000+ material samples using Excel macros
+  * Automated large-scale data analysis for 10+ material samples using Excel macros
   * Conducted performance testing with Instron & LDS shaker systems
   * Wrote Python scripts for converting raw output into summarized engineering reports
 
