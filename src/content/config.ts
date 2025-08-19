@@ -100,7 +100,7 @@ export const siteConfig = {
   about: {
     bio: "Results-driven Software Engineer specializing in full-stack development and machine learning. I build scrapers, automations, and ML-powered tools that eliminate manual work and surface insights quickly. Currently pursuing General Engineering/Computer Science at NJIT while working as CTO & Co-Founder at Reminous and Manufacturing Engineering Intern at Shock Tech Inc. NCAA Division 1 Track and Field athlete with a passion for turning complex technical challenges into simple, reliable systems.",
     metrics: [
-      { label: "10+ repetitive tasks automated", value: "2,000+" },
+      { label: "repetitive tasks automated", value: "10+" },
       { label: "Time Saved", value: "24hrs → seconds" },
       { label: "Technologies", value: "15+" },
       { label: "Current Year", value: "Junior @ NJIT" },
