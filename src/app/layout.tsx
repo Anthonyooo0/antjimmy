@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Anthony Jimenez - Software Engineer Portfolio",
+  title: "Anthony Jimenez - Portfolio",
   description: "Results-driven engineer who builds scrapers, automations, and ML-powered tools that remove manual work and surface insights fast.",
 };
 
