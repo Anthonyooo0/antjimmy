@@ -168,4 +168,4 @@ export const siteConfig = {
   ]
 };
 
-export const resumeUrl = "/resume.pdf";
+export const resumeUrl = "/resume.docx";
