@@ -109,6 +109,13 @@ export const siteConfig = {
 
   experience: [
     {
+      title: "AI Software Engineer Intern",
+      company: "MAC Products, Kearny, NJ",
+      period: "2024 - 2025",
+      description: "Built and refined GPT-based automations for quoting, purchasing, and engineering workflows. Integrated agents with ERP, Microsoft 365, and CRM systems through REST APIs. Partnered with teams to identify high-ROI processes and track performance improvements. Produced documentation, prototypes, and presentations for leadership review.",
+      tech: ["Python", "GPT", "REST APIs", "ERP", "Microsoft 365", "CRM"]
+    },
+    {
       title: "CTO & Co-Founder",
       company: "Reminous, Orlando, FL - Remote",
       period: "05/2025 - Current",
