@@ -111,7 +111,7 @@ export const siteConfig = {
     {
       title: "AI Software Engineer Intern",
       company: "MAC Products, Kearny, NJ",
-      period: "2024 - 2025",
+      period: "09/2025 - Current",
       description: "Built and refined GPT-based automations for quoting, purchasing, and engineering workflows. Integrated agents with ERP, Microsoft 365, and CRM systems through REST APIs. Partnered with teams to identify high-ROI processes and track performance improvements. Produced documentation, prototypes, and presentations for leadership review.",
       tech: ["Python", "GPT", "REST APIs", "ERP", "Microsoft 365", "CRM"]
     },
@@ -125,7 +125,7 @@ export const siteConfig = {
     {
       title: "Manufacturing Engineering Intern",
       company: "Shock Tech Inc, Mahwah, NJ",
-      period: "12/2024 - Current", 
+      period: "12/2024 - 08/2025", 
       description: "Created Python automations to streamline production data flows and analysis. Built Excel/VBA tool for isolator matching, cutting 8-hour manual task to seconds. Designed 3D-printed jigs in SolidWorks; supported waterjet/laser automation setups.",
       tech: ["Python", "Excel/VBA", "SolidWorks", "Git"]
     },
