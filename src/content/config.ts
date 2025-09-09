@@ -112,8 +112,8 @@ export const siteConfig = {
       title: "AI Software Engineer Intern",
       company: "MAC Products, Kearny, NJ",
       period: "09/2025 - Current",
-      description: "Built and refined GPT-based automations for quoting, purchasing, and engineering workflows. Integrated agents with ERP, Microsoft 365, and CRM systems through REST APIs. Partnered with teams to identify high-ROI processes and track performance improvements. Produced documentation, prototypes, and presentations for leadership review.",
-      tech: ["Python", "GPT", "REST APIs", "ERP", "Microsoft 365", "CRM"]
+      description: "Built AI Agents and  automations for quoting, purchasing, and engineering workflows. Integrated agents with ERP, Microsoft 365, and CRM systems through REST APIs. Partnered with teams to identify high-ROI processes and track performance improvements. Produced documentation, prototypes, and presentations for leadership review.",
+      tech: ["Python", "Lang Chain", "REST APIs", "ERP", "Microsoft 365", "CRM"]
     },
     {
       title: "CTO & Co-Founder",
