@@ -69,7 +69,7 @@ export const siteConfig = {
       stack: ["Python", "Playwright", "Selenium", "Pandas", "SQLite", "scikit-learn", "Discord webhooks"],
       image: "/projects/v8-deal-finder.jpg",
       liveUrl: "",
-      githubUrl: "https://github.com/anthonyooo0/v8-deal-finder",
+      githubUrl: "https://github.com/Anthonyooo0/Engine_Deal_AI",
     },
     {
       title: "PDF Email Automation & OCR", 
@@ -77,7 +77,7 @@ export const siteConfig = {
       stack: ["Python", "pytesseract", "pdf2image", "pandas", "openpyxl", "IMAP"],
       image: "/projects/pdf-automation.jpg",
       liveUrl: "",
-      githubUrl: "https://github.com/anthonyooo0/pdf-email-automation",
+      githubUrl: "https://github.com/Anthonyooo0/Email_PDF_Data_Export",
     },
     {
       title: "LinkedIn Easy Apply Bot",
@@ -89,7 +89,7 @@ export const siteConfig = {
     },
     {
       title: "Manufacturing Automation Tools",
-      description: "Python automations for production data flows and Excel/VBA isolator matching tool that cut 8-hour manual task to seconds. Includes 3D-printed jigs design.",
+      description: "Python automations for production data flows and Excel/VBA isolator matching tool that cut 8-hour manual task to seconds.",
       stack: ["Python", "Excel/VBA", "SolidWorks", "Manufacturing"],
       image: "/projects/manufacturing-tools.jpg",
       liveUrl: "", 
