@@ -100,7 +100,7 @@ export const siteConfig = {
   ],
 
   about: {
-    bio: "Machine Learning Engineer with hands-on experience building production AI systems, predictive models, and intelligent automation workflows. Currently developing ML solutions at MAC Products using LangChain, LLM agents, and ETL pipelines. Experienced in clinical ML (patient risk prediction), NLP (complaint classification), and end-to-end ML pipelines from data engineering to model deployment. Pursuing General Engineering at NJIT while competing as a NCAA Division 1 Track and Field athlete. Passionate about applying ML to solve real-world problems in healthcare, manufacturing, and business operations.",
+    bio: "Machine Learning Engineer with hands-on experience building production AI systems, predictive models, and intelligent automation workflows. Currently developing ML solutions at MAC Products using LangChain, LLM agents, and ETL pipelines. Experienced in clinical ML (patient risk prediction), NLP (complaint classification), and end-to-end ML pipelines from data engineering to model deployment. Pursuing General Engineering at NJIT. Former NCAA Division 1 Track and Field athlete. Passionate about applying ML to solve real-world problems in healthcare, manufacturing, and business operations.",
     metrics: [
       { label: "ML Models Deployed", value: "5+" },
       { label: "Processing Time Reduction", value: "70%+" },
@@ -139,7 +139,7 @@ export const siteConfig = {
     location: "Newark, NJ",
     major: "General Engineering/Computer Science",
     graduation: "May 2027",
-    athletics: "NCAA Division 1 Track and Field athlete"
+    athletics: "Former NCAA Division 1 Track and Field athlete (2 years)"
   },
 
   faq: [
@@ -160,8 +160,8 @@ export const siteConfig = {
       answer: "At MAC Products, I built a production complaint classification system using Gemini LLM with multi-step reasoning. Implemented entity extraction, automated deduplication, and thread merging. Also experienced with LangChain, RAG architectures, and LLM agent workflows for document retrieval and compliance review."
     },
     {
-      question: "How do you balance work and athletics?",
-      answer: "As a NCAA Division 1 Track and Field athlete at NJIT, I've learned excellent time management and discipline. The competitive mindset translates well to ML challenges—iterating on models, optimizing hyperparameters, and pushing for better performance metrics."
+      question: "How did athletics shape your engineering mindset?",
+      answer: "As a former NCAA Division 1 Track and Field athlete at NJIT (2 years), I developed excellent time management and discipline. The competitive mindset translates directly to ML challenges—iterating on models, optimizing hyperparameters, and pushing for better performance metrics through systematic improvement."
     },
     {
       question: "What drives your passion for ML?",
