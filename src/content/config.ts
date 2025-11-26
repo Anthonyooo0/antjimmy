@@ -111,25 +111,18 @@ export const siteConfig = {
 
   experience: [
     {
-      title: "AI Software Engineer",
+      title: "AI Software Engineer — Lead Developer for Internal AI Systems",
       company: "MAC Products, Kearny, NJ",
       period: "09/2025 - Current",
-      description: "Built, deployed and managed AI Agents and  automations for quoting, purchasing, and engineering workflows. Integrated agents with Azure APIs, Microsoft 365, and CRM systems through REST APIs. Partnered with teams to identify high-ROI processes and track performance improvements. Produced documentation, prototypes, and presentations for leadership review.",
-      tech: ["Python", "Lang Chain", "REST APIs", "ERP", "Azure", "CRM"]
+      description: "Lead the architecture and development of end-to-end AI software used across Quality, Engineering, Purchasing, and Customer Service. Built automated data analysis pipelines transforming unstructured emails/PDFs into validated defect logs and trend reports. Designed RAG and agentic workflows using LangChain, SQL, and Gemini/OpenAI for material-code lookup, document retrieval, and compliance review. Implemented multi-stage LLM reasoning and structured-output templates for reliable, production-grade automation. Train multiple departments on AI tools, prompting strategy, and workflow adoption; authored internal AI usage guidelines.",
+      tech: ["LangChain", "Gemini", "OpenAI", "RAG", "SQL", "Python", "LLM Agents", "ETL"]
     },
     {
       title: "Manufacturing Engineering Intern",
       company: "Shock Tech Inc, Mahwah, NJ",
-      period: "12/2024 - 08/2025",
-      description: "Created Python automations to streamline production data flows and analysis. Built Excel/VBA tool for isolator matching, cutting 8-hour manual task to seconds. Designed 3D-printed jigs in SolidWorks; supported waterjet/laser automation setups.",
-      tech: ["Python", "Excel/VBA", "SolidWorks", "Git"]
-    },
-    {
-      title: "Testing Engineering Intern",
-      company: "Shock Tech Inc, Mahwah, NJ",
-      period: "12/2023 – 12/2024",
-      description: "Operated Instron/LDS systems for tensile, compression, and failure testing on aerospace grade elastomers. Automated analytics for 2,000+ samples via Excel macros and Python, generating summarized test reports. Converted raw equipment exports into concise engineering insights.",
-      tech: ["Excel macros", "Python", "Matplotlib", "Pandas"]
+      period: "12/2023 - 09/2025",
+      description: "Developed a centralized RPA test-data pipeline, converting raw material readings into structured Excel databases used by engineering & management. Built Python + VBA automation for cleaning, parsing, feature extraction, and reporting, reducing processing time by 60%. Performed daily RPA testing and created data-driven dashboards for vibration-isolator mechanical performance. Automated manual workflows to improve accuracy, repeatability, and audit readiness.",
+      tech: ["Python", "Excel/VBA", "Pandas", "Data Pipelines", "Feature Extraction", "Dashboards"]
     }
   ],
 
