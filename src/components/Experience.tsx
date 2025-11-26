@@ -19,7 +19,7 @@ export default function Experience() {
             Work Experience
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Building automation tools and ML systems that eliminate manual work
+            Developing production AI systems, ML models, and intelligent automation workflows
           </p>
         </motion.div>
 

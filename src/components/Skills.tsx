@@ -30,10 +30,10 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-text mb-6">
-            Technical Excellence
+            Technical Skills
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Specialized in automation, ML, and full-stack development with a focus on eliminating manual work
+            Expertise in ML/AI, deep learning, data engineering, and production model deployment
           </p>
         </motion.div>
 
