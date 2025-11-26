@@ -118,16 +118,9 @@ export const siteConfig = {
       tech: ["Python", "Lang Chain", "REST APIs", "ERP", "Azure", "CRM"]
     },
     {
-      title: "CTO & Co-Founder",
-      company: "Reminous, Orlando, FL - Remote",
-      period: "05/2025 - Current",
-      description: "Lead software strategy for marketing automation startup. Built Python scripts to automate lead collection, database syncing, and outreach. Created internal dashboards for sales tracking and collaboration. Coordinate product requirements with design and marketing across weekly sprints.",
-      tech: ["Python", "Pandas", "SQLite", "Dash", "Git", "Linux"]
-    },
-    {
       title: "Manufacturing Engineering Intern",
       company: "Shock Tech Inc, Mahwah, NJ",
-      period: "12/2024 - 08/2025", 
+      period: "12/2024 - 08/2025",
       description: "Created Python automations to streamline production data flows and analysis. Built Excel/VBA tool for isolator matching, cutting 8-hour manual task to seconds. Designed 3D-printed jigs in SolidWorks; supported waterjet/laser automation setups.",
       tech: ["Python", "Excel/VBA", "SolidWorks", "Git"]
     },
