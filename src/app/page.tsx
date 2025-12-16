@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import Navigation from '@/components/Navigation'
+import TrustedBy from '@/components/TrustedBy'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
 import About from '@/components/About'
@@ -11,6 +12,7 @@ export default function Home() {
     <main className="min-h-screen bg-bg text-text">
       <Navigation />
       <Hero />
+      <TrustedBy />
       <Skills />
       <Projects />
       <About />

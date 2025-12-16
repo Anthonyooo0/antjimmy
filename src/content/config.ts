@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Anthony Jimenez",
+  name: "Porfirio Jimenez",
   role: "Machine Learning Engineer",
   location: "United States",
   email: "tj.jimenez03@gmail.com",

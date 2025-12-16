@@ -1,12 +1,12 @@
-# Anthony Jimenez Portfolio
+# Porfirio Jimenez Portfolio
 
-A modern, performant portfolio website built with Next.js 14, featuring a masculine/industrial aesthetic and an AI-powered Q&A system. The site showcases Anthony's engineering projects, automation expertise, and machine learning experience.
+A modern, performant portfolio website built with Next.js 14, featuring a masculine/industrial aesthetic and an AI-powered Q&A system. The site showcases Porfirio's engineering projects, automation expertise, and machine learning experience.
 
 ## 🚀 Features
 
 - **Modern Tech Stack**: Next.js 14 (App Router), TypeScript, Tailwind CSS, Framer Motion
-- **AI Q&A Integration**: Interactive chat system that can answer questions about Anthony's background
-- **Resume Integration**: All content populated from Anthony's actual resume data
+- **AI Q&A Integration**: Interactive chat system that can answer questions about Porfirio's background
+- **Resume Integration**: All content populated from Porfirio's actual resume data
 - **Industrial Design**: Bold, masculine aesthetic with high-contrast dark theme
 - **Mobile-First**: Responsive design optimized for all devices
 - **Performance Optimized**: Lighthouse scores ≥95 on mobile
@@ -42,7 +42,7 @@ anthony-portfolio/
 │   └── content/
 │       └── config.ts        # Site configuration and content
 ├── public/
-│   └── resume.pdf          # Anthony's resume for download
+│   └── resume.pdf          # Porfirio's resume for download
 └── extract_resume.py       # Script used to parse resume data
 ```
 
@@ -88,7 +88,7 @@ All site content is centralized in `src/content/config.ts` for easy editing:
 ### Personal Information
 ```typescript
 export const siteConfig = {
-  name: "Anthony Jimenez",
+  name: "Porfirio Jimenez",
   role: "Software Engineer (Full-Stack & ML)",
   email: "tj.jimenez03@gmail.com",
   phone: "201-230-4890",
@@ -130,7 +130,7 @@ To update the resume:
 
 ## 🤖 AI Q&A System
 
-The `/ask-me` page features an AI assistant that can answer questions about Anthony's:
+The `/ask-me` page features an AI assistant that can answer questions about Porfirio's:
 - Technical experience and projects
 - Work history and achievements  
 - Educational background
@@ -262,4 +262,4 @@ This project is licensed under the MIT License.
 
 ---
 
-Built with ❤️ by Anthony Jimenez
+Built with ❤️ by Porfirio Jimenez
