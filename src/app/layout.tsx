@@ -1,21 +1,43 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
 export const metadata: Metadata = {
-  title: "Anthony Jimenez - Portfolio",
-  description: "Results-driven engineer who builds scrapers, automations, and ML-powered tools that remove manual work and surface insights fast.",
+  title: "Anthony Jimenez | Machine Learning Engineer",
+  description:
+    "Building intelligent systems that learn, predict, and automate. Specializing in production ML, LLMs, and end-to-end AI pipelines.",
+  keywords: [
+    "Machine Learning Engineer",
+    "ML Engineer",
+    "AI Developer",
+    "PyTorch",
+    "LangChain",
+    "Production ML",
+    "New Jersey",
+  ],
+  authors: [{ name: "Anthony Jimenez" }],
+  openGraph: {
+    title: "Anthony Jimenez | Machine Learning Engineer",
+    description:
+      "Building intelligent systems that learn, predict, and automate.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anthony Jimenez | Machine Learning Engineer",
+    description:
+      "Building intelligent systems that learn, predict, and automate.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0a0a0c",
 };
 
 export default function RootLayout({
@@ -25,9 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="antialiased">
         {children}
       </body>
     </html>

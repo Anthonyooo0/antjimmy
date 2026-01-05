@@ -1,46 +1,8 @@
 "use client";
 
-/**
- * Footer Component
- *
- * Premium footer with:
- * - Clean grid layout with contact info
- * - Social links with hover animations
- * - Newsletter signup (optional)
- * - Legal links
- *
- * Design Rationale:
- * The footer acts as the final touchpoint. It should feel complete
- * and professional while providing all necessary contact/legal info.
- */
-
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
-
-const socialLinks = [
-  {
-    name: "GitHub",
-    href: "https://github.com/Anthonyooo0",
-    icon: Github,
-  },
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/in/anthony-jimenez-4bb943200/",
-    icon: Linkedin,
-  },
-  {
-    name: "Email",
-    href: "mailto:tj.jimenez03@gmail.com",
-    icon: Mail,
-  },
-];
-
-const quickLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-];
+import { personalInfo, socialLinks, navigation } from "@/lib/data";
+import { Github, Linkedin, Mail, ArrowUpRight, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -61,108 +23,107 @@ export default function Footer() {
   };
 
   return (
-    <footer
-      className="bg-primary-900 text-white"
-      role="contentinfo"
-    >
-      {/* Main Footer Content */}
-      <div className="container-premium section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-surface)]">
+      <div className="container-wide py-16 md:py-20">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-8">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-5">
             <Link
               href="/"
-              className="inline-block font-heading text-3xl font-bold mb-4"
+              className="type-title text-[var(--color-text)] inline-block mb-4"
             >
-              Anthony Jimenez<span className="text-secondary-500">.</span>
+              {personalInfo.firstName}
+              <span className="text-[var(--color-accent)]">.</span>
             </Link>
-            <p className="text-neutral-300 text-body max-w-md mb-6">
-              Machine Learning Engineer building intelligent systems that solve
-              real-world problems. Specializing in production AI, predictive
-              modeling, and automation.
+            <p className="type-body text-[var(--color-text-secondary)] max-w-sm mb-6">
+              {personalInfo.tagline}
             </p>
+
             {/* Social Links */}
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary-500 transition-all duration-300 hover:scale-110"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5" aria-hidden="true" />
-                </a>
-              ))}
+            <div className="flex items-center gap-4">
+              <a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+              >
+                <Github size={18} />
+                <span className="text-sm">GitHub</span>
+              </a>
+              <span className="text-[var(--color-border)]">|</span>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+              >
+                <Linkedin size={18} />
+                <span className="text-sm">LinkedIn</span>
+              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-heading font-semibold text-lg mb-6">
-              Quick Links
-            </h3>
-            <ul className="space-y-3" role="list">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-neutral-300 hover:text-white transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+          {/* Navigation Column */}
+          <div className="md:col-span-3">
+            <h4 className="type-label text-[var(--color-text-muted)] mb-4">
+              Navigation
+            </h4>
+            <nav className="flex flex-col gap-3">
+              {navigation.map((item) => (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors text-sm"
+                >
+                  {item.label}
+                </a>
               ))}
-            </ul>
+            </nav>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-heading font-semibold text-lg mb-6">
+          {/* Contact Column */}
+          <div className="md:col-span-4">
+            <h4 className="type-label text-[var(--color-text-muted)] mb-4">
               Get in Touch
-            </h3>
-            <ul className="space-y-3 text-neutral-300" role="list">
-              <li>
-                <a
-                  href="mailto:tj.jimenez03@gmail.com"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  tj.jimenez03@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+12012304890"
-                  className="hover:text-white transition-colors duration-300"
-                >
-                  (201) 230-4890
-                </a>
-              </li>
-              <li className="text-neutral-400">
-                New Jersey, USA
-              </li>
-            </ul>
+            </h4>
+            <div className="space-y-3">
+              <a
+                href={socialLinks.email}
+                className="group flex items-center gap-2 text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
+              >
+                <Mail size={16} />
+                <span className="text-sm">{personalInfo.email}</span>
+                <ArrowUpRight
+                  size={14}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity"
+                />
+              </a>
+              <p className="text-sm text-[var(--color-text-muted)]">
+                {personalInfo.location}
+              </p>
+              <div className="pt-2">
+                <span className="inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full bg-[var(--color-accent-dim)] text-[var(--color-accent)]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] animate-pulse" />
+                  {personalInfo.availability}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container-premium py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-neutral-400 text-sm">
-            &copy; {currentYear} Anthony Jimenez. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-[var(--color-text-muted)]">
+            &copy; {currentYear} {personalInfo.name}. All rights reserved.
           </p>
-
-          {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors duration-300 group"
-            aria-label="Back to top"
+            className="flex items-center gap-2 text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors group"
           >
             <span className="text-sm">Back to top</span>
-            <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform duration-300" />
+            <ArrowUp size={16} className="group-hover:-translate-y-1 transition-transform" />
           </button>
         </div>
       </div>
