@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@studio-freight/lenis": "^1.0.42",
     "@types/nodemailer": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
