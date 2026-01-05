@@ -1,14 +1,13 @@
+"use client";
+
 /**
  * Portfolio Homepage
  *
- * Assembles all sections into a cohesive, scroll-driven experience.
- * Each section is self-contained with its own GSAP animations.
- *
- * Section Flow (Persuasion Arc):
- * 1. Hero - Emotional hook & value proposition
- * 2. Featured Work - Visual proof of capability
- * 3. About - Personal story & credibility
- * 4. CTA - Final conversion moment
+ * Premium scroll-driven experience with:
+ * - Lenis smooth scrolling
+ * - Custom cursor
+ * - Scroll progress indicator
+ * - GSAP animations throughout
  */
 
 import Nav from "@/components/Nav";
@@ -17,10 +16,19 @@ import Hero from "@/components/sections/Hero";
 import FeaturedWork from "@/components/sections/FeaturedWork";
 import About from "@/components/sections/About";
 import CTA from "@/components/sections/CTA";
+import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export default function Home() {
   return (
-    <>
+    <SmoothScroll>
+      {/* Custom Cursor */}
+      <CustomCursor />
+
+      {/* Scroll Progress */}
+      <ScrollProgress variant="bar" position="top" />
+
       {/* Navigation */}
       <Nav />
 
@@ -41,6 +49,6 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-    </>
+    </SmoothScroll>
   );
 }
