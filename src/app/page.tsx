@@ -14,6 +14,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Hero from "@/components/sections/Hero";
 import FeaturedWork from "@/components/sections/FeaturedWork";
+import MacProducts from "@/components/sections/MacProducts";
 import About from "@/components/sections/About";
 import CTA from "@/components/sections/CTA";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -39,6 +40,9 @@ export default function Home() {
 
         {/* Featured Work - Show, don't tell */}
         <FeaturedWork />
+
+        {/* MAC Products - Professional work showcase */}
+        <MacProducts />
 
         {/* About - Build connection */}
         <About />
