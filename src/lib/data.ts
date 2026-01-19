@@ -23,8 +23,8 @@ export const socialLinks = {
 
 export const navigation = [
   { label: "Work", href: "#work" },
+  { label: "MAC Products", href: "#mac-products" },
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
@@ -180,3 +180,89 @@ export const aboutText = {
   body: "Currently at MAC Products, I architect end-to-end AI solutions that transform how teams work—from LLM-powered document analysis to automated compliance workflows. My background spans clinical ML (patient risk prediction), NLP (complaint classification), and intelligent automation pipelines.",
   personal: "Former NCAA Division 1 Track & Field athlete at NJIT. The competitive mindset translates directly to ML—iterating on models, optimizing hyperparameters, and pushing for better metrics through systematic improvement.",
 } as const;
+
+export interface MacProduct {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  impact: string[];
+  stack: string[];
+  highlights: string[];
+  metrics: { value: string; label: string }[];
+}
+
+export const macProducts: MacProduct[] = [
+  {
+    id: "quality-dashboard",
+    title: "MAC Quality Dashboard",
+    subtitle: "AI-Powered Complaint Classification System",
+    description: "Enterprise-grade quality management automation that intelligently processes customer complaint emails using AI classification. Automatically extracts and categorizes quality issues from Microsoft Outlook into a centralized database with rich analytics.",
+    impact: [
+      "Reduced manual complaint tracking by 70%",
+      "Processes 10,000+ part numbers against master inventory",
+      "8-stage validation pipeline ensures data integrity",
+    ],
+    stack: ["Python", "Streamlit", "Gemini LLM", "Microsoft Graph API", "SQLite", "OAuth 2.0", "Pandas"],
+    highlights: [
+      "Multi-layer email filtering with 6-stage noise reduction",
+      "Intelligent thread parsing supporting 7+ email client formats",
+      "Atomic Excel writes with corruption prevention",
+      "OAuth 2.0 device code flow authentication",
+    ],
+    metrics: [
+      { value: "3,346", label: "Lines of Code" },
+      { value: "110", label: "Functions" },
+      { value: "2", label: "API Integrations" },
+      { value: "3", label: "UI Platforms" },
+    ],
+  },
+  {
+    id: "router-generator",
+    title: "MAC Router Generator",
+    subtitle: "AI-Powered Manufacturing Router Creation",
+    description: "Multimodal AI system that analyzes engineering drawings (PDFs) and generates standardized manufacturing routing documents for Made2Manage ERP. Replaces manual router creation that previously required experienced manufacturing engineers.",
+    impact: [
+      "Automates router creation from PDF drawings",
+      "14 real-world examples embedded for few-shot learning",
+      "8-step deterministic CSV validation pipeline",
+    ],
+    stack: ["Python", "Streamlit", "Gemini Multimodal", "Pillow", "RegEx", "CSV Processing"],
+    highlights: [
+      "Multimodal PDF analysis with 60s timeout handling",
+      "Temperature 0.1 for deterministic AI output",
+      "Arithmetic validation overrides AI-generated totals",
+      "8 work center types with auto-generated instructions",
+    ],
+    metrics: [
+      { value: "1,331", label: "Lines of Code" },
+      { value: "8", label: "Validation Steps" },
+      { value: "14", label: "Training Examples" },
+      { value: "6", label: "Gemini Models" },
+    ],
+  },
+  {
+    id: "project-command-center",
+    title: "MAC Project Command Center",
+    subtitle: "Full-Stack Project Management System",
+    description: "Enterprise project management application for high-voltage electrical equipment manufacturing. Manages complete project lifecycle from design through Factory Acceptance Testing (FAT) to shipment with comprehensive audit logging.",
+    impact: [
+      "Real-time tracking for manufacturing projects",
+      "5-phase milestone visualization system",
+      "Complete audit trail for regulatory compliance",
+    ],
+    stack: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
+    highlights: [
+      "Granular change tracking with before/after diffs",
+      "Multi-format date parsing (4+ formats)",
+      "Memoized filtering for performance optimization",
+      "Nested modal system with proper z-index management",
+    ],
+    metrics: [
+      { value: "1,957", label: "Lines of Code" },
+      { value: "5", label: "View Modes" },
+      { value: "15+", label: "Tracked Fields" },
+      { value: "22", label: "Git Commits" },
+    ],
+  },
+];
