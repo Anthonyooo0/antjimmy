@@ -14,8 +14,23 @@ export default function Hero() {
   }
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/hero-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay for text readability */}
+      <div className="absolute inset-0 bg-black/60 z-10" />
+
+      {/* Content */}
+      <div className="relative z-20 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
