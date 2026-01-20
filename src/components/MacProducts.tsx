@@ -57,7 +57,7 @@ export default function MacProducts() {
           </div>
 
           {/* Box 6 - Fulltime role text */}
-          <div className="col-span-12 md:col-span-4 bg-white/10 border-2 border-dashed border-white/40 rounded-lg p-6 min-h-[150px] flex items-center justify-center">
+          <div className="col-span-12 md:col-span-4 row-span-1 bg-white/10 border-2 border-dashed border-white/40 rounded-lg p-6 min-h-[100px] flex items-center justify-center">
             <div className="text-center">
               <span className="text-6xl font-bold text-white/30">6</span>
               <p className="text-white/60 mt-2">Fulltime role while still in college</p>
@@ -65,7 +65,7 @@ export default function MacProducts() {
           </div>
 
           {/* Box 7 - mac_pp.mp4 */}
-          <div className="col-span-12 md:col-span-6 bg-white/10 border-2 border-dashed border-white/40 rounded-lg min-h-[250px] flex items-center justify-center">
+          <div className="col-span-12 md:col-span-4 bg-white/10 border-2 border-dashed border-white/40 rounded-lg min-h-[250px] flex items-center justify-center">
             <div className="text-center">
               <span className="text-6xl font-bold text-white/30">7</span>
               <p className="text-white/60 mt-2">mac_pp.mp4</p>
@@ -73,7 +73,7 @@ export default function MacProducts() {
           </div>
 
           {/* Box 8 - Router Automation */}
-          <div className="col-span-12 md:col-span-6 bg-white/10 border-2 border-dashed border-white/40 rounded-lg min-h-[250px] flex items-center justify-center">
+          <div className="col-span-12 md:col-span-4 bg-white/10 border-2 border-dashed border-white/40 rounded-lg min-h-[250px] flex items-center justify-center">
             <div className="text-center">
               <span className="text-6xl font-bold text-white/30">8</span>
               <p className="text-white/60 mt-2">Router Automation</p>
