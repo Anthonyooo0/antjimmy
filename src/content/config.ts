@@ -1,10 +1,10 @@
 export const siteConfig = {
   name: "Anthony Jimenez",
-  role: "Software Engineer (Full-Stack & ML)",
+  role: "Software Engineer",
   location: "United States",
   email: "tj.jimenez03@gmail.com",
   phone: "201-230-4890",
-  tagline: "Results-driven engineer who builds scrapers, automations, and ML-powered tools that remove manual work and surface insights fast.",
+  tagline: "Creative engineer who turns complex problems into solutions. I design end-to-end software to enhance human capability—not replace it.",
   description: "Passionate about turning messy real-world data into simple, reliable systems. Ship small, iterate quickly, and measure outcomes.",
   
   social: {
