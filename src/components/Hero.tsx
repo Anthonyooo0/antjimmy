@@ -14,15 +14,8 @@ export default function Hero() {
   }
 
   return (
-    <section 
-      id="hero" 
-      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 relative bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: 'url(/hero-background.avif)',
-      }}
-    >
-      <div className="absolute inset-0 bg-black/60"></div>
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+      <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +69,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
         >
           {siteConfig.about.metrics.map((metric) => (
             <div key={metric.label} className="text-center">
