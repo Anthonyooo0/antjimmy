@@ -79,24 +79,6 @@ export default function Hero() {
             Download Resume
           </a>
         </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
-        >
-          {siteConfig.about.metrics.map((metric) => (
-            <div key={metric.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-accent mb-2">
-                {metric.value}
-              </div>
-              <div className="text-muted text-sm">
-                {metric.label}
-              </div>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   )
