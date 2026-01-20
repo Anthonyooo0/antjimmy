@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 
 export default function MacProducts() {
   return (
@@ -26,9 +25,7 @@ export default function MacProducts() {
             </div>
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-xl font-bold text-white">Lead Developer @</span>
-              <div className="w-24 h-8 bg-white/20 rounded flex items-center justify-center">
-                <span className="text-white/60 text-xs">mac_logo.png</span>
-              </div>
+              <img src="/mac_logo.png" alt="MAC Products" className="h-8 w-auto" />
             </div>
             <p className="text-white/80 text-center text-sm leading-relaxed">
               Building AI-powered enterprise systems that transform manufacturing operations.
