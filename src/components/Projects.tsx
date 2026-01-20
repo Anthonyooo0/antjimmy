@@ -17,10 +17,10 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-text mb-6">
-            Machine Learning Projects
+            Engineering Projects
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Production ML systems from predictive modeling to LLM-powered automation
+            End-to-end systems that automate manual work and surface insights fast
           </p>
         </motion.div>
 

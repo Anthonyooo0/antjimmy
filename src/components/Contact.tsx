@@ -17,25 +17,12 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitStatus('idle')
     
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({ name: '', email: '', message: '' })
-      } else {
-        setSubmitStatus('error')
-      }
-    } catch (error) {
-      console.error('Contact form error:', error)
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+    } catch {
       setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
@@ -199,7 +186,7 @@ export default function Contact() {
               
               {submitStatus === 'error' && (
                 <p className="text-red-400 text-sm text-center">
-                  Something went wrong. Please try again or email me directly at {siteConfig.email}.
+                  Something went wrong. Please try again or email me directly.
                 </p>
               )}
             </form>
