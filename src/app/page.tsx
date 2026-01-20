@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero'
 import Navigation from '@/components/Navigation'
-import Skills from '@/components/Skills'
+import MacProducts from '@/components/MacProducts'
 import Projects from '@/components/Projects'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
@@ -11,7 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-bg text-text">
       <Navigation />
       <Hero />
-      <Skills />
+      <MacProducts />
       <Projects />
       <About />
       <Experience />
