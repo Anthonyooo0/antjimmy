@@ -15,10 +15,9 @@ export const siteConfig = {
 
   nav: [
     { name: "Home", href: "#hero" },
-    { name: "MAC Products", href: "#mac-products" },
-    { name: "Projects", href: "#projects" },
-    { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
+    { name: "Research", href: "#research" },
+    { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ],
 
