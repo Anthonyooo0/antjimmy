@@ -22,8 +22,8 @@ export default function ExperienceSection() {
             <img src="/mac_logo.png" alt="MAC Products" className="h-12 sm:h-14 w-auto" />
           </div>
           <p className="text-muted text-lg max-w-2xl">
-            Building AI-powered enterprise systems that transform manufacturing operations.
-            Full-time role while completing my degree at NJIT.
+            Architecting AI-powered enterprise systems that transform how manufacturing teams work.
+            Shipping production software while completing my degree at NJIT.
           </p>
         </motion.div>
 
