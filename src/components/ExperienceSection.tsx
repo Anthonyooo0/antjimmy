@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Briefcase, Play } from 'lucide-react'
+import { Play } from 'lucide-react'
 
 export default function ExperienceSection() {
   return (
@@ -18,14 +18,11 @@ export default function ExperienceSection() {
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
-            <Briefcase className="text-accent" size={28} />
-            <span className="text-accent font-medium">Professional Experience</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-text">Lead Developer @</h2>
+            <img src="/mac_logo.png" alt="MAC Products" className="h-12 sm:h-14 w-auto" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-text mb-4">
-            MAC Products
-          </h2>
           <p className="text-muted text-lg max-w-2xl">
-            Lead Developer building AI-powered enterprise systems that transform manufacturing operations.
+            Building AI-powered enterprise systems that transform manufacturing operations.
             Full-time role while completing my degree at NJIT.
           </p>
         </motion.div>
